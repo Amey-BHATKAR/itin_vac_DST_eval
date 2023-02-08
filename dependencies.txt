@@ -1,0 +1,6 @@
+pip install folium
+pip install networkx
+pip install haversine
+pip install -U scikit-learn
+pip install dash
+pip install pandas

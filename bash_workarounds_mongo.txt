@@ -1,0 +1,15 @@
+# installs mongo
+sudo apt-get install -y mongodb-org
+
+# makes owner | following if it doesn't work
+sudo chown -R mongodb:mongodb /var/lib/mongodb/
+sudo chown mogngodb:mongodb /tmp/mongodb-27017.sock 
+sudo systemctl daemon-reload
+sudo systemctl start mongod
+sudo systemctl status mongod
+
+for creating dump files for db
+mongodump -d <database_name> -o <directory_backup>
+
+for restoring the mongodb
+mongorestore -d test_eval_2 ~/project_evaluation/dump/test_eval/
